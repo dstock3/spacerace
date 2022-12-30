@@ -20,5 +20,10 @@ def mission_detail(id):
     else:
         return "Mission not found", 404
 
+@app.route('/timeline')
+def timeline():
+    missions = get_mission_data()
+    return render_template('timeline.html', missions=missions)
+
 if __name__ == '__main__':
     app.run(debug=True)

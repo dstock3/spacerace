@@ -7,9 +7,9 @@
     <body class="homepage">
         <h1>Welcome to the Space Race</h1>
         <nav class="home-nav">
-            <a class="nav-link selected" href="/">Home</a>
-            <a class="nav-link" href="/missions">Mission List</a>
-            <a class="nav-link" href="/timeline">Timeline</a>
+            <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
+            <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
         </nav>
         <main class="space-info-container">
             <p class="space-info">This app provides information about the space race, a competition between the United States and the Soviet Union to explore and advance in space during the Cold War.</p>
