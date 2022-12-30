@@ -1,4 +1,4 @@
-def get_mission_data(id):
+def get_mission_data(id=None):
     missions = [
         {
             'id': 1,
@@ -61,6 +61,9 @@ def get_mission_data(id):
             'description': 'The first Artemis mission, which will test the Space Launch System rocket and the Orion spacecraft for future lunar exploration.'
         }
     ]
+
+    if id is None:
+        return missions
 
     for mission in missions:
         if mission['id'] == id:

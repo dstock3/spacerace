@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mission List</title>
+    </head>
+    <body class="mission-list">
+        <h1>Mission List</h1>
+        <ul>
+            {% for mission in missions %}
+            <li>
+                <a href="/mission/{{ mission.id }}">{{ mission.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

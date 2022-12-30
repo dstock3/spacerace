@@ -7,6 +7,11 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/missions')
+def mission_list():
+    missions = get_mission_data()
+    return render_template('mission_list.html', missions=missions)
+
 @app.route('/mission/<int:id>')
 def mission_detail(id):
     mission = get_mission_data(id)
