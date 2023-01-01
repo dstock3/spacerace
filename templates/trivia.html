@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>Space Race Trivia Quiz</title>
+    </head>
+    <body class="trivia">
+        <h1>Space Race Trivia Quiz</h1>
+        <nav class="home-nav">
+            <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
+            <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
+            <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
+        </nav>
+        <form class="trivia-form" method="post">
+            {% for question in questions %}
+            <div class="trivia-question">
+                <p>{{ question.question }}</p>
+                <ul class="trivia-options">
+                    {% for option in question.options %}
+                    <li class="trivia-option"><input class="trivia-option-input" type="radio" name="{{ question.question }}" value="{{ option }}">{{ option }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

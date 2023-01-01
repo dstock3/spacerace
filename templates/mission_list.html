@@ -10,6 +10,7 @@
             <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
             <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
             <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
+            <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
         </nav>
         <ul class="mission-list">
             {% for mission in missions %}
