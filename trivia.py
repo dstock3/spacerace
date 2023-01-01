@@ -1,3 +1,5 @@
+import random
+
 trivia_questions = [
     {
         'question': 'What was the first manned mission of the Mercury program?',
@@ -50,3 +52,6 @@ trivia_questions = [
         'options': ['USSR', 'USA', 'China'],
     }
 ]
+
+def get_random_question():
+    return random.choice(trivia_questions)

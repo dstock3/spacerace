@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from missions import get_mission_data
+from trivia import trivia_questions
 
 app = Flask(__name__)
 
@@ -24,6 +25,10 @@ def mission_detail(id):
 def timeline():
     missions = get_mission_data()
     return render_template('timeline.html', missions=missions)
+
+@app.route('/trivia')
+def trivia():
+    return render_template('trivia.html', questions=trivia_questions)
 
 if __name__ == '__main__':
     app.run(debug=True)
