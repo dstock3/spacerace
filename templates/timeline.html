@@ -15,14 +15,17 @@
                 <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
             </nav>
         </header>
-        <ul class="timeline-list">
-            {% for mission in missions %}
-            <li class="timeline-item">
-                <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
-                <p>{{ mission.launch_date }}</p>
-            </li>
-            {% endfor %}
-        </ul>
+        <main class="timeline-container">
+            <ul class="timeline-list">
+                {% for mission in missions %}
+                <li class="timeline-item">
+                    <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
+                    <p>{{ mission.launch_date }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+
         <footer>
             <div className="attribution">
                 Created by David Stockdale.
