@@ -5,13 +5,15 @@
         <title>Space Race Trivia Quiz</title>
     </head>
     <body class="trivia">
-        <h1>Space Race Trivia Quiz</h1>
-        <nav class="home-nav">
-            <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
-            <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
-            <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
-            <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
-        </nav>
+        <header>
+            <h1>Space Race Trivia</h1>
+            <nav class="home-nav">
+                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
+                <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
+                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
+                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
+            </nav>
+        </header>
         <form class="trivia-form" method="post">
             {% for question in questions %}
             <div class="trivia-question">
@@ -25,5 +27,24 @@
             {% endfor %}
             <button type="submit">Submit</button>
         </form>
+        <footer>
+            <div className="attribution">
+                Created by David Stockdale.
+            </div>
+            <div className="social-links">
+                <a className="social-link" href="https://github.com/dstock3" target="_blank" rel="noopener noreferrer">
+                    Github
+                    <!-- 
+                    <img className="github-icon" src={githubIcon} alt="github icon"></img>
+                    -->
+                </a>
+                <a className="social-link" href="https://davestockdale.io/" target="_blank" rel="noopener noreferrer">
+                    Portfolio
+                    <!-- 
+                    <img className="code-icon" src={codeIcon} alt="code icon"></img>
+                    -->
+                </a>
+            </div>
+        </footer>
     </body>
 </html>
