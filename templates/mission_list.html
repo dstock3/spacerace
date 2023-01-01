@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>Mission List</title>
+    </head>
+    <body class="mission-list">
+        <h1>Mission List</h1>
+        <nav class="home-nav">
+            <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
+            <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
+        </nav>
+        <ul class="mission-list">
+            {% for mission in missions %}
+            <li class="mission-item">
+                <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
