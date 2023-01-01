@@ -29,5 +29,24 @@ trivia_questions = [
         'answer': 'Apollo 8',
         'options': ['Gemini 7', 'Apollo 8', 'Skylab'],
     },
-    # Add more questions here...
+    {
+        'question': 'What was the first spacecraft to land on an asteroid?',
+        'answer': 'Hayabusa',
+        'options': ['Hayabusa', 'OSIRIS-REx', 'Dawn'],
+    },
+    {
+        'question': 'What was the first spacecraft to land on a comet?',
+        'answer': 'Philae',
+        'options': ['Hayabusa', 'Philae', 'Dawn'],
+    },
+    {
+        'question': 'Which country launched the first satellite into space?',
+        'answer': 'USSR',
+        'options': ['USSR', 'USA', 'China'],
+    },
+    {
+        'question': 'Which country sent the first human into space?',
+        'answer': 'USSR',
+        'options': ['USSR', 'USA', 'China'],
+    }
 ]
