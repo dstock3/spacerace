@@ -12,11 +12,35 @@ body {
     flex-direction: column;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 100px;
+    margin-top: auto;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    background-color: black;
+}
+
 /* Homepage styles */
 
 .space-info-container {
-    max-width: 800px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.425);
     padding: 20px;
+
 }
 
 .space-info {
@@ -32,6 +56,7 @@ h1 {
     margin: 10px 0;
     text-align: center;
     text-shadow: 1px 1px 2px #000;
+    margin-bottom: 15px;
 }
 
 .home-nav {
@@ -55,18 +80,11 @@ h1 .space-info {
 }
 
 .nav-link.selected {
-    color: blue;
+    color: rgb(134, 134, 247);
     font-weight: bold;
 }
 
-footer {
-    height: 100px;
-    margin-top: auto;
-    text-align: center;
-    font-size: 18px;
-    padding: 10px;
-    background-color: black;
-}
+
 
 .attribution {
     font-weight: bold;
