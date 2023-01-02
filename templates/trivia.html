@@ -14,19 +14,22 @@
                 <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
             </nav>
         </header>
-        <form class="trivia-form" method="post">
-            {% for question in questions %}
-            <div class="trivia-question">
-                <p>{{ question.question }}</p>
-                <ul class="trivia-options">
-                    {% for option in question.options %}
-                    <li class="trivia-option"><input class="trivia-option-input" type="radio" name="{{ question.question }}" value="{{ option }}">{{ option }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
-            <button type="submit">Submit</button>
-        </form>
+        <main class="trivia-container">
+            <form class="trivia-form" method="post">
+                {% for question in questions %}
+                <div class="trivia-question">
+                    <p>{{ question.question }}</p>
+                    <ul class="trivia-options">
+                        {% for option in question.options %}
+                        <li class="trivia-option"><input class="trivia-option-input" type="radio" name="{{ question.question }}" value="{{ option }}">{{ option }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+
         <footer>
             <div className="attribution">
                 Created by David Stockdale.

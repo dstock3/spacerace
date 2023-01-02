@@ -14,31 +14,33 @@
                 <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
             </nav>
         </header>
-        <ul class="mission-list">
-            {% for mission in missions %}
-            <li class="mission-item">
-                <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+        <main class="mission-list-container">
+            <ul class="mission-list">
+                {% for mission in missions %}
+                <li class="mission-item">
+                    <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+        <footer>
+            <div className="attribution">
+                Created by David Stockdale.
+            </div>
+            <div className="social-links">
+                <a className="social-link" href="https://github.com/dstock3" target="_blank" rel="noopener noreferrer">
+                    Github
+                    <!-- 
+                    <img className="github-icon" src={githubIcon} alt="github icon"></img>
+                    -->
+                </a>
+                <a className="social-link" href="https://davestockdale.io/" target="_blank" rel="noopener noreferrer">
+                    Portfolio
+                    <!-- 
+                    <img className="code-icon" src={codeIcon} alt="code icon"></img>
+                    -->
+                </a>
+            </div>
+        </footer>
     </body>
-    <footer>
-        <div className="attribution">
-            Created by David Stockdale.
-        </div>
-        <div className="social-links">
-            <a className="social-link" href="https://github.com/dstock3" target="_blank" rel="noopener noreferrer">
-                Github
-                <!-- 
-                <img className="github-icon" src={githubIcon} alt="github icon"></img>
-                -->
-            </a>
-            <a className="social-link" href="https://davestockdale.io/" target="_blank" rel="noopener noreferrer">
-                Portfolio
-                <!-- 
-                <img className="code-icon" src={codeIcon} alt="code icon"></img>
-                -->
-            </a>
-        </div>
-    </footer>
 </html>
