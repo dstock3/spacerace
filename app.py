@@ -20,9 +20,8 @@ def trivia():
             if user_answer == correct_answer:
                 score += 1
 
-        return render_template('trivia_results.html', score=score)
+        return render_template('trivia_results.html', score=score, total=len(trivia_questions), questions=trivia_questions)
     else:
-        
         return render_template('trivia.html', questions=trivia_questions)
 
 @app.route('/timeline')

@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/static/css/style.css">
-        <title>Space Race Trivia Results</title>
+        <title>Space Race Trivia Quiz Results</title>
     </head>
     <body class="trivia-results">
         <header>
@@ -15,8 +15,27 @@
             </nav>
         </header>
         <main class="trivia-results-container">
-            <p>You scored {{ score }} out of {{ questions|length }}</p>
-            <a class="try-again" href="/trivia">Try Again</a>
+            <div class="score-indicator">
+                <p>Your score: {{ score }}/{{ total }}</p>
+                {% if score == total %}
+                    <p>Congratulations, you got a perfect score!</p>
+                {% elif score > total/2 %}
+                    <p>Great job, you did well!</p>
+                {% else %}
+                    <p>Sorry, you didn't score as well as you hoped. Better luck next time!</p>
+                {% endif %}
+            </div>
+            {% for question in questions %}
+                <div class="trivia-question-result">
+                    <p>{{ question.question }}</p>
+                    {% if question.correct %}
+                        <p>Correct!</p>
+                    {% else %}
+                        <p>Incorrect. The correct answer was: {{ question.correct_answer }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <a class="try-again-button" href="/trivia">Try Again</a>
         </main>
         <footer>
             <div class="attribution">
