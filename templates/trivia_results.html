@@ -25,16 +25,20 @@
                     <p>Sorry, you didn't score as well as you hoped. Better luck next time!</p>
                 {% endif %}
             </div>
-            {% for question in questions %}
-                <div class="trivia-question-result">
-                    <p>{{ question.question }}</p>
-                    {% if question.correct %}
-                        <p>Correct!</p>
-                    {% else %}
-                        <p>Incorrect. The correct answer was: {{ question.correct_answer }}</p>
-                    {% endif %}
-                </div>
-            {% endfor %}
+            <ul class="trivia-question-results">
+                {% for question in questions %}
+                    <li class="trivia-question-result">
+                        <p>{{ question.question }}</p>
+
+                        {% if question.correct %}
+                            <p>Correct!</p>
+                        {% else %}
+                            <p>Your answer was incorrect. The correct answer is: {{ question.answer }}</p>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+
             <a class="try-again-button" href="/trivia">Try Again</a>
         </main>
         <footer>
