@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from missions import get_mission_data
 from trivia import trivia_questions
 
@@ -8,9 +8,22 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/trivia')
+@app.route('/trivia', methods=['GET', 'POST'])
 def trivia():
-    return render_template('trivia.html', questions=trivia_questions)
+    if request.method == 'POST':
+        answers = request.form
+
+        score = 0
+        for question in trivia_questions:
+            correct_answer = question['answer']
+            user_answer = answers.get(question['question'])
+            if user_answer == correct_answer:
+                score += 1
+
+        return render_template('trivia_results.html', score=score)
+    else:
+        
+        return render_template('trivia.html', questions=trivia_questions)
 
 @app.route('/timeline')
 def timeline():
