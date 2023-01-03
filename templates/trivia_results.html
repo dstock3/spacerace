@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>Space Race Trivia Results</title>
+    </head>
+    <body class="trivia-results">
+        <header>
+            <h1>Space Race Trivia Results</h1>
+            <nav class="home-nav">
+                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
+                <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
+                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
+                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
+            </nav>
+        </header>
+        <main class="trivia-results-container">
+            <p>You scored {{ score }} out of {{ questions|length }}</p>
+            <a class="try-again" href="/trivia">Try Again</a>
+        </main>
+    </body>
+</html>
