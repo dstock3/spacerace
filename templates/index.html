@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="/static/css/style.css">
         <title>Space Race</title>
@@ -9,10 +9,10 @@
             <h1>Welcome to the Space Race</h1>
             <div class="dec-line"></div>
             <nav class="home-nav">
-                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" href="/">Home</a>
-                <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" href="/missions">Mission List</a>
-                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" href="/timeline">Timeline</a>
-                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" href="/trivia">Triva Quiz</a>
+                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" aria-label="Home" href="/">Home</a>
+                <a class="nav-link {% if request.path == '/missions' %}selected{% endif %}" aria-label="Mission List" href="/missions">Mission List</a>
+                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" aria-label="Timeline" href="/timeline">Timeline</a>
+                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" aria-label="Trivia" href="/trivia">Triva</a>
             </nav>
         </header>
 
