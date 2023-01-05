@@ -22,10 +22,15 @@
     font-size: 15px;
     font-weight: bold;
     margin: 10px 0;
+    text-align: center;
 }
 
 .timeline-item p {
     color: white;
     font-size: 14px;
     margin: 0;
+}
+
+.timeline-item:hover {
+    background-color: #555;
 }
