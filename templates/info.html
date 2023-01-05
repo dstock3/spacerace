@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="/static/css/style.css">
-        <title>Space Race Trivia Quiz</title>
+        <title>Space Race</title>
     </head>
-    <body class="trivia">
+    <body class="homepage">
         <header>
-            <h1>Space Race Trivia</h1>
+            <h1>Welcome to the Space Race</h1>
             <div class="dec-line"></div>
             <nav class="home-nav">
                 <a class="nav-link {% if request.path == '/' %}selected{% endif %}" aria-label="Home" href="/">Home</a>
@@ -15,20 +15,9 @@
                 <a class="nav-link {% if request.path == '/info' %}selected{% endif %}" aria-label="Information" href="/info">Information</a>
             </nav>
         </header>
-        <main class="trivia-container">
-            <form class="trivia-form" method="post">
-                {% for question in questions %}
-                <div class="trivia-question">
-                    <p>{{ question.question }}</p>
-                    <ul class="trivia-options">
-                        {% for option in question.options %}
-                        <li class="trivia-option"><input class="trivia-option-input" type="radio" name="{{ question.question }}" value="{{ option }}">{{ option }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
-                <button type="submit">Submit</button>
-            </form>
+
+        <main class="info-container">
+
         </main>
 
         <footer>
