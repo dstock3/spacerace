@@ -9,7 +9,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 150px;
+    height: 100px;
     margin: 7px;
     background-color: #333;
     border-radius: 5px;
@@ -23,6 +25,10 @@
     font-weight: bold;
     margin: 10px 0;
     text-align: center;
+}
+
+.timeline-item a:hover {
+    color: rgb(168, 168, 246);
 }
 
 .timeline-item p {
