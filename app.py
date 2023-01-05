@@ -29,11 +29,6 @@ def timeline():
     missions = get_mission_data()
     return render_template('timeline.html', missions=missions)
 
-@app.route('/missions')
-def missions():
-    missions = get_mission_data()
-    return render_template('mission_list.html', missions=missions)
-
 @app.route('/mission/<int:id>')
 def mission_detail(id):
     mission = get_mission_data(id)
