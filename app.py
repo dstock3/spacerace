@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from missions import get_mission_data
 from trivia import trivia_questions
 
@@ -6,7 +6,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    images = [
+        {'url': url_for('static', filename='images/image1.jpg'), 'alt': 'image 1'},
+        {'url': url_for('static', filename='images/image2.jpg'), 'alt': 'image 2'},
+        {'url': url_for('static', filename='images/image3.jpg'), 'alt': 'image 3'}
+    ]
+    return render_template('index.html', images=images)
 
 @app.route('/trivia', methods=['GET', 'POST'])
 def trivia():
