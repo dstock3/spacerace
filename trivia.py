@@ -1,5 +1,3 @@
-import random
-
 trivia_questions = [
     {   
         'id': 1,
@@ -63,5 +61,3 @@ trivia_questions = [
     }
 ]
 
-def get_random_question():
-    return random.choice(trivia_questions)

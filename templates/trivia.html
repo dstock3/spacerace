@@ -26,7 +26,7 @@
             <form class="trivia-form" method="post">
                 {% for question in questions %}
                 <div class="trivia-question" id="{{ question.id }}" data-next="{{ question.id + 1 }}">
-                    <p>{{ question.question }}</p>
+                    <p class="question-prompt">{{ question.question }}</p>
                     <ul class="trivia-options">
                         {% for option in question.options %}
                         <li class="trivia-option"><input class="trivia-option-input" type="radio" name="{{ question.question }}" value="{{ option }}">{{ option }}</li>
@@ -34,7 +34,7 @@
                     </ul>
                 </div>
                 {% endfor %}
-                <button type="submit">Submit</button>
+                <button type="submit" data-next="Next Question">Next Question</button>
             </form>
         </main>
 
