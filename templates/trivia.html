@@ -25,7 +25,7 @@
         <main class="trivia-container">
             <form class="trivia-form" method="post">
                 {% for question in questions %}
-                <div class="trivia-question">
+                <div class="trivia-question" id="{{ question.id }}" data-next="{{ question.id + 1 }}">
                     <p>{{ question.question }}</p>
                     <ul class="trivia-options">
                         {% for option in question.options %}
@@ -57,5 +57,6 @@
                 </a>
             </div>
         </footer>
+        <script src="/static/js/trivia.js"></script>
     </body>
 </html>
