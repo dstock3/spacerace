@@ -2,10 +2,16 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="/static/css/style.css">
-        <title>{{ mission.name }}</title>
-        <meta name="description" content="Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War.">
         
-        <meta name="keywords" content="space race, history, Cold War, United States, Soviet Union, space exploration">
+        <title>{{ mission.name }}</title>
+
+        <meta name="description" content="{{ mission.description }}">
+        
+        <meta name="keywords" content="{{ mission.name }}, space race, history, Cold War, United States, Soviet Union, space exploration">
+
+        <meta property="og:title" content="{{ mission.name }}">
+        
+        <meta property="og:description" content="{{ mission.description }}">
     </head>
     <body>
         <header>
