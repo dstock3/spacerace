@@ -17,6 +17,26 @@
     font-weight: bold;
 }
 
+.trivia-options {
+    list-style: none;
+}
+
+.trivia-option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgba(44, 44, 44, 0.605);
+    width: fit-content;
+    margin-bottom: 7px;
+    padding-right: 15px;
+}
+
+input {
+    margin-right: 10px;
+}
+
 button {
     color: rgba(238, 238, 238, 0.894);;
     background-color: black;
