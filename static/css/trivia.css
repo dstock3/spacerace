@@ -31,10 +31,16 @@
     width: fit-content;
     margin-bottom: 7px;
     padding-right: 15px;
+    cursor: pointer;
+}
+
+.trivia-option:hover {
+    background-color: #555;
 }
 
 input {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 button {
