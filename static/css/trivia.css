@@ -1,0 +1,9 @@
+.trivia-container {
+    height: 100%;
+}
+
+.trivia-form {
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+    padding: 10px;
+}
