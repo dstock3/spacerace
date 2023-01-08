@@ -18,6 +18,12 @@
 }
 
 button {
+    color: rgba(238, 238, 238, 0.894);;
+    background-color: black;
+    border: 2px solid rgba(238, 238, 238, 0.894);
+    border-bottom-right-radius: 15px;
     align-self: flex-end;
     width: 25%;
+    height: 50px;
+    cursor: pointer;
 }
