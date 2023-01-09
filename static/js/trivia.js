@@ -4,6 +4,17 @@ for (let i = 1; i < questions.length; i++) {
     questions[i].style.display = "none";
 }
 
+let triviaOptions = document.querySelectorAll('.trivia-option');
+
+for (let i = 0; i < triviaOptions.length; i++) {
+    let radio = triviaOptions[i].firstChild
+    triviaOptions[i].addEventListener('click', function(event) {
+        radio.checked = true;
+    });
+}
+
+
+
 let submitButton = document.querySelector('button[type="submit"]');
 submitButton.innerHTML = "Next Question";
 
