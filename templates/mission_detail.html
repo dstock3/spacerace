@@ -28,10 +28,11 @@
             <h1 class="mission-head">{{ mission.name }}</h1>
             <p class="launch-date">Launch Date: {{ mission.launch_date }}</p>
             <p class="mission-description">{{ mission.description }}</p>
-            <a class="mission-link" href="/mission/{{ mission.id - 1 }}">Previous Mission</a>
-            <a class="mission-link" href="/mission/{{ mission.id + 1 }}">Next Mission</a>
-            
-            
+            <div class="mission-link-container">
+                <a class="mission-link" href="/mission/{{ mission.id - 1 }}"><< Previous Mission</a>
+                <a class="mission-link" href="/mission/{{ mission.id + 1 }}">Next Mission >></a>
+            </div>
+
         </main>
         <footer>
             <div class="attribution">
