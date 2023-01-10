@@ -41,8 +41,10 @@ def info():
 @app.route('/mission/<int:id>')
 def mission_detail(id):
     mission = get_mission_data(id)
+    keywords = ', '.join(mission['keywords'])
+    
     if mission:
-        return render_template('mission_detail.html', mission=mission)
+        return render_template('mission_detail.html', mission=mission, keywords=keywords)
     else:
         return "Mission not found", 404
 

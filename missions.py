@@ -117,7 +117,7 @@ def get_mission_data(id=None):
             'description': 'The first modular space station, launched by the Soviet Union in 1986. Mir was in operation for 15 years, during which time it was visited by a total of 28 long-term expeditions and over 100 short-term missions. It was also the site of various space-based scientific experiments, as well as being the first space station to be visited by space shuttles from the United States. Mir was decommissioned in 2001 and deorbited in March of that year.',
             "meta": "Mir was the first modular space station, launched by the Soviet Union in 1986. It was in operation for 15 years, during which time it was visited by a total of 28 long-term expeditions and over 100 short-term missions.",
             "keywords": [
-                "Union",
+                "Societ Union",
                 "Russia",
                 "Space station",
                 "1986-2001",
