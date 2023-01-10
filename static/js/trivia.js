@@ -12,6 +12,13 @@ for (let i = 0; i < triviaOptions.length; i++) {
 
     lineItem.addEventListener('click', function(event) {
         radio.checked = true;
+        lineItem.style.backgroundColor = "#555"
+
+        for (let x = 0; x < triviaOptions.length; x++) {
+            if (lineItem.textContent !== triviaOptions[x].textContent) {
+                triviaOptions[x].style.backgroundColor = "rgba(44, 44, 44, 0.605)"
+            }
+        }
     });
 }
 
