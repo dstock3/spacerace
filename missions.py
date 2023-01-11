@@ -136,7 +136,24 @@ def get_mission_data(id=None):
             'launch_date': '1998-11-20',
             'description': 'The International Space Station (ISS) is a habitable, habitable spacecraft that orbits Earth and is home to a rotating crew of astronauts from various countries. The ISS is a collaboration between NASA, the Russian space agency Roscosmos, the European Space Agency, the Japanese space agency JAXA, and the Canadian space agency CSA. It was launched in 1998 and has been continuously inhabited since 2000, making it the longest-occupied space station in history. The ISS is used for research in a variety of fields, including biology, physics, and astronomy, as well as for testing new technologies and conducting experiments in microgravity. The ISS is an important symbol of international cooperation in space exploration, and it serves as a stepping stone for future human missions to other destinations in the solar system.',
             "meta": "The International Space Station (ISS) is a habitable, habitable spacecraft that orbits Earth and is home to a rotating crew of astronauts from various countries.",
-            "keywords": []
+            "keywords": [
+                "International Space Station",
+                "ISS",
+                "orbital research",
+                "microgravity",
+                "astronauts",
+                "space exploration",
+                "NASA",
+                "ESA",
+                "space station",
+                "orbit",
+                "low Earth orbit",
+                "astronomy",
+                "cosmology",
+                "science experiments",
+                "human spaceflight",
+                "satellite"
+            ]
         },
         {
             'id': 8,
@@ -144,7 +161,25 @@ def get_mission_data(id=None):
             'launch_date': '2011-11-26',
             'description': "The Mars Curiosity Rover is a robotic vehicle designed to explore the surface of Mars and search for signs of past or present microbial life. It was launched in 2011 and has been active on the surface of Mars ever since. The rover is equipped with a variety of scientific instruments and tools, including cameras, spectrometers, and drill bits, which it uses to analyze the chemical and mineral composition of rocks and soil. It is also equipped with a weather station and a laser-induced breakdown spectroscope, which it uses to study the planet's atmosphere and search for organic molecules. The rover's primary mission is to determine whether Mars has ever had the potential to support microbial life, and to help pave the way for future manned missions to the planet.",
             "meta": "The Mars Curiosity Rover is a robotic vehicle designed to explore the surface of Mars and search for signs of past or present microbial life.",
-            "keywords": []
+            "keywords": [
+                "Mars Curiosity Rover",
+                "MSL",
+                "Mars Science Laboratory",
+                "NASA",
+                "JPL",
+                "Jet Propulsion Laboratory",
+                "Mars Exploration Program",
+                "Curiosity",
+                "red planet",
+                "rovers",
+                "mars",
+                "planetary science",
+                "geology",
+                "astrobiology",
+                "search for life",
+                "Mount Sharp",
+                "sample analysis"
+            ]
         },
         {
             'id': 9,
@@ -152,7 +187,21 @@ def get_mission_data(id=None):
             'launch_date': '2018-12-07',
             'description': "Chang'e 4 is a Chinese lunar exploration mission that aims to land a rover on the far side of the Moon. The mission, which was launched on December 7, 2018, is named after the Chinese moon goddess Chang'e. The mission's primary goals include conducting scientific research on the Moon's composition, studying the interaction between solar wind and the lunar surface, and searching for resources that could be used in future lunar exploration missions. Additionally, Chang'e 4 aims to demonstrate the feasibility of using the far side of the Moon as a base for future space exploration. The mission successfully landed on the far side of the Moon on January 3, 2019, making it the first spacecraft to do so.",
             "meta": "Chang'e 4 is a Chinese lunar exploration mission that aims to land a rover on the far side of the Moon.",
-            "keywords": []
+            "keywords": [
+                "Chang'e 4",
+                "China National Space Administration",
+                "CNSA",
+                "lunar exploration",
+                "moon",
+                "Yutu-2",
+                "landing",
+                "far side of the moon",
+                "lunar rover",
+                "lunar surface",
+                "planetary science",
+                "astrogeology",
+                "space science"
+            ]
         },
         {
             'id': 10,
@@ -160,7 +209,22 @@ def get_mission_data(id=None):
             'launch_date': '2022-11-01',
             'description': 'Artemis 1 is a mission planned by NASA as part of the Artemis program, which aims to land humans on the Moon by 2024. Artemis 1 is an unmanned test flight of the Space Launch System rocket and the Orion spacecraft, which will be used for future manned missions to the Moon and potentially beyond. The mission will also include a number of scientific payloads to study the lunar environment and collect data for future missions. Artemis 1 is currently scheduled to launch in November 2022.',
             "meta": "Artemis 1 is a mission planned by NASA as part of the Artemis program, which aims to land humans on the Moon by 2024.",
-            "keywords": []
+            "keywords": [
+                "Artemis 1",
+                "NASA",
+                "Space Launch System",
+                "Orion",
+                "moon",
+                "moon mission",
+                "lunar exploration",
+                "human spaceflight",
+                "moon landing",
+                "deep space exploration",
+                "Gateway",
+                "sustainability",
+                "international cooperation",
+                "Artemis program"
+            ]
         }
     ]
 
