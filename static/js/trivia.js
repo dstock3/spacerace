@@ -6,21 +6,18 @@ for (let i = 1; i < questions.length; i++) {
 
 let triviaOptions = document.querySelectorAll('.trivia-option');
 
-for (let i = 0; i < triviaOptions.length; i++) {
-    let lineItem = triviaOptions[i]
-    let radio = lineItem.firstChild
+triviaOptions.forEach(function(option) {
+    option.addEventListener('click', function(event) {
+        option.firstChild.checked = true;
+        option.style.backgroundColor = "#555";
 
-    lineItem.addEventListener('click', function(event) {
-        radio.checked = true;
-        lineItem.style.backgroundColor = "#555"
-
-        for (let x = 0; x < triviaOptions.length; x++) {
-            if (lineItem.textContent !== triviaOptions[x].textContent) {
-                triviaOptions[x].style.backgroundColor = "rgba(44, 44, 44, 0.605)"
+        triviaOptions.forEach(function(otherOption) {
+            if (option !== otherOption) {
+                otherOption.style.backgroundColor = "rgba(44, 44, 44, 0.605)";
             }
-        }
+        });
     });
-}
+});
 
 let submitButton = document.querySelector('button[type="submit"]');
 submitButton.innerHTML = "Next Question";
