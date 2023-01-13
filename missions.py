@@ -153,6 +153,26 @@ def get_mission_data(id=None):
         },
         {
             'id': 8,
+            'name': 'Hubble Space Telescope',
+            'launch_date': '1990-04-24',
+            'description': "The Hubble Space Telescope is a telescope in orbit around Earth, launched into space in 1990. It is named after the American astronomer Edwin Hubble and is one of the most important astronomical instruments in history. The telescope is capable of capturing images of distant galaxies and has made many groundbreaking discoveries, such as the accelerating expansion of the universe. It has also been instrumental in the study of black holes and dark matter.",
+            "meta": "The Hubble Space Telescope is a telescope launched in 1990, in orbit around Earth. It is named after Edwin Hubble and has made many groundbreaking discoveries.",
+            "keywords": [
+                "Space telescope",
+                "Earth orbit",
+                "Edwin Hubble",
+                "Astronomy",
+                "1990",
+                "Distant galaxies",
+                "Expanding universe",
+                "Black holes",
+                "Dark matter",
+                "NASA",
+                "STS-31 mission"
+            ]
+        },
+        {
+            'id': 9,
             'name': 'International Space Station',
             'launch_date': '1998-11-20',
             'description': 'The International Space Station (ISS) is a habitable, habitable spacecraft that orbits Earth and is home to a rotating crew of astronauts from various countries. The ISS is a collaboration between NASA, the Russian space agency Roscosmos, the European Space Agency, the Japanese space agency JAXA, and the Canadian space agency CSA. It was launched in 1998 and has been continuously inhabited since 2000, making it the longest-occupied space station in history. The ISS is used for research in a variety of fields, including biology, physics, and astronomy, as well as for testing new technologies and conducting experiments in microgravity. The ISS is an important symbol of international cooperation in space exploration, and it serves as a stepping stone for future human missions to other destinations in the solar system.',
@@ -177,7 +197,7 @@ def get_mission_data(id=None):
             ]
         },
         {
-            'id': 9,
+            'id': 10,
             'name': 'Mars Curiosity Rover',
             'launch_date': '2011-11-26',
             'description': "The Mars Curiosity Rover is a robotic vehicle designed to explore the surface of Mars and search for signs of past or present microbial life. It was launched in 2011 and has been active on the surface of Mars ever since. The rover is equipped with a variety of scientific instruments and tools, including cameras, spectrometers, and drill bits, which it uses to analyze the chemical and mineral composition of rocks and soil. It is also equipped with a weather station and a laser-induced breakdown spectroscope, which it uses to study the planet's atmosphere and search for organic molecules. The rover's primary mission is to determine whether Mars has ever had the potential to support microbial life, and to help pave the way for future manned missions to the planet.",
@@ -203,7 +223,7 @@ def get_mission_data(id=None):
             ]
         },
         {
-            'id': 10,
+            'id': 11,
             'name': "Chang'e 4",
             'launch_date': '2018-12-07',
             'description': "Chang'e 4 is a Chinese lunar exploration mission that aims to land a rover on the far side of the Moon. The mission, which was launched on December 7, 2018, is named after the Chinese moon goddess Chang'e. The mission's primary goals include conducting scientific research on the Moon's composition, studying the interaction between solar wind and the lunar surface, and searching for resources that could be used in future lunar exploration missions. Additionally, Chang'e 4 aims to demonstrate the feasibility of using the far side of the Moon as a base for future space exploration. The mission successfully landed on the far side of the Moon on January 3, 2019, making it the first spacecraft to do so.",
@@ -225,7 +245,7 @@ def get_mission_data(id=None):
             ]
         },
         {
-            'id': 11,
+            'id': 12,
             'name': 'Artemis 1',
             'launch_date': '2022-11-01',
             'description': 'Artemis 1 is a mission planned by NASA as part of the Artemis program, which aims to land humans on the Moon by 2024. Artemis 1 is an unmanned test flight of the Space Launch System rocket and the Orion spacecraft, which will be used for future manned missions to the Moon and potentially beyond. The mission will also include a number of scientific payloads to study the lunar environment and collect data for future missions. Artemis 1 is currently scheduled to launch in November 2022.',
