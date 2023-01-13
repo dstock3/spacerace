@@ -40,13 +40,16 @@ def info():
 
 @app.route('/mission/<int:id>')
 def mission_detail(id):
-    mission = get_mission_data(id)
-    keywords = ', '.join(mission['keywords'])
-    
-    if mission:
-        return render_template('mission_detail.html', mission=mission, keywords=keywords)
-    else:
-        return "Mission not found", 404
+    try:
+        mission = get_mission_data(id)
+        if mission:
+            keywords = ', '.join(mission['keywords'])
+            return render_template('mission_detail.html', mission=mission, keywords=keywords)
+        else:
+            return render_template('error.html',error_message="Mission not found"),404
+    except Exception as e:
+        return render_template('error.html',error_message=str(e)), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)
