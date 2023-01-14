@@ -28,11 +28,11 @@
         </header>
         <main class="timeline-container">
             <ul class="timeline-list">
-                {% for mission in missions %}
-                <li class="timeline-item">
-                    <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
-                    <p>{{ mission.launch_date }}</p>
-                </li>
+                {% for mission in missions|sort(attribute='launch_date') %}
+                    <li class="timeline-item">
+                        <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
+                        <p>{{ mission.launch_date }}</p>
+                    </li>
                 {% endfor %}
             </ul>
         </main>
