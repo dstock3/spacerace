@@ -132,3 +132,8 @@ h1 {
     font-weight: bold;
     color: black;
 }
+
+.single {
+    width: 100%;
+    text-align: center;
+}
