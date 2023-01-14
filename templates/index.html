@@ -1,75 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="/static/css/style.css">
-        
-        <title>History of the Space Race</title>
-        
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
-        
-        <script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
-        
-        <meta name="description" content="Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War.">
-        
-        <meta name="keywords" content="space race, history, Cold War, United States, Soviet Union, space exploration">
+{% extends 'base.html' %}
+{% block title %}History of the Space Race{% endblock %}
+{% block body_class %}homepage{% endblock %}
+{% block main_class %}homepage-container{% endblock %}
+{% block header %}History of the Space Race{% endblock %}
+{% block content %}
+    <div class="slideshow">
+        {% for image in images %}
+            <img src="{{ image.url }}" alt="{{ image.alt }}">
+        {% endfor %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/slick.min.js"></script>
+    <script>
+        $('.slideshow').slick({
+            autoplay: true,
+            dots: true,
+            fade: true,
+            ajaxLoader: '/static/slick/ajax-loader.gif'
+        });
+    </script>
 
-        <meta property="og:title" content="History of the Space Race">
-        
-        <meta property="og:description" content="Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War.">
-    </head>
-    <body class="homepage">
-        <header>
-            <h1>History of the Space Race</h1>
-            <div class="dec-line"></div>
-            <nav class="home-nav">
-                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" aria-label="Home" href="/">Home</a>
-                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" aria-label="Timeline" href="/timeline">Timeline</a>
-                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" aria-label="Trivia" href="/trivia">Trivia</a>
-                <a class="nav-link {% if request.path == '/info' %}selected{% endif %}" aria-label="Information" href="/info">Information</a>
-            </nav>
-        </header>
-
-        <main class="homepage-container">
-            <div class="slideshow">
-                {% for image in images %}
-                    <img src="{{ image.url }}" alt="{{ image.alt }}">
-                {% endfor %}
-            </div>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="/static/js/slick.min.js"></script>
-            <script>
-                $('.slideshow').slick({
-                    autoplay: true,
-                    dots: true,
-                    fade: true,
-                    ajaxLoader: '/static/slick/ajax-loader.gif'
-                });
-            </script>
-
-            <div class="space-info-container">
-                <p class="space-info">The space race was a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War. It began in the 1950s and ended in the 1970s, although space exploration and competition between various countries and organizations has continued in the years since.</p>
-                <p class="space-info">There have been numerous manned and unmanned missions to other planets and celestial bodies, as well as the development of various space-based technologies and the establishment of international cooperation in space exploration.</p>
-            </div>
-        </main>
-
-        <footer>
-            <div class="attribution">
-                Created by David Stockdale.
-            </div>
-            <div class="social-links">
-                <a class="social-link" href="https://github.com/dstock3" target="_blank" rel="noopener noreferrer">
-                    Github
-                    <!-- 
-                    <img class="github-icon" src={githubIcon} alt="github icon"></img>
-                    -->
-                </a>
-                <a class="social-link" href="https://davestockdale.io/" target="_blank" rel="noopener noreferrer">
-                    Portfolio
-                    <!-- 
-                    <img class="code-icon" src={codeIcon} alt="code icon"></img>
-                    -->
-                </a>
-            </div>
-        </footer>
-    </body>
-</html>
+    <div class="space-info-container">
+        <p class="space-info">The space race was a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War. It began in the 1950s and ended in the 1970s, although space exploration and competition between various countries and organizations has continued in the years since.</p>
+        <p class="space-info">There have been numerous manned and unmanned missions to other planets and celestial bodies, as well as the development of various space-based technologies and the establishment of international cooperation in space exploration.</p>
+    </div>
+{% endblock %}
