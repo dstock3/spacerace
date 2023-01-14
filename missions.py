@@ -339,6 +339,44 @@ def get_mission_data(id=None):
                 "Artemis program"
             ],
             'era': 'Post Space Race'
+        },
+        {
+            'id': 16,
+            'name': 'Gemini 4',
+            'launch_date': '1965-06-03',
+            'description': "Gemini 4 was a manned spaceflight of the United States, launched on June 3, 1965. It was the second manned mission of the Gemini program, and astronaut Edward White became the first American astronaut to perform a spacewalk. The mission lasted for four days and orbited the Earth 66 times. Gemini 4 was a major achievement for the United States in the space race, as it demonstrated the capabilities of the Gemini spacecraft and the ability of American astronauts to perform spacewalks.",
+            'meta': "Gemini 4 was the second manned mission of the Gemini program, astronaut Edward White performed the first American spacewalk and orbited the Earth for 4 days in 1965.",
+            'keywords': [
+                "United States",
+                "Space exploration",
+                "Human spaceflight",
+                "Gemini program",
+                "Edward White",
+                "Spacewalk",
+                "Jim McDivitt",
+                "NASA",
+                "Space Race",
+                "First American spacewalk",
+            ]
+        },
+        {
+            'id': 10,
+            'name': 'Gemini 8',
+            'launch_date': '1966-03-16',
+            'description': "Gemini 8 was a manned spaceflight of the United States, launched on March 16, 1966. It was the sixth manned mission of the Gemini program, and astronaut Neil Armstrong became the first person to dock two spacecraft in space. The mission lasted for just under 12 hours before an emergency splashdown. Gemini 8 was a major achievement for the United States in the space race, as it demonstrated the capabilities of the Gemini spacecraft and the ability of American astronauts to perform docking maneuvers.",
+            'meta': "Gemini 8 was the sixth manned mission of the Gemini program, astronaut Neil Armstrong became the first person to dock two spacecraft in space. The mission lasted for 12 hours before an emergency splashdown in 1966.",
+            'keywords': [
+                "United States",
+                "Space exploration",
+                "Human spaceflight",
+                "Gemini program",
+                "Neil Armstrong",
+                "Docking",
+                "David Scott",
+                "NASA",
+                "Space Race",
+                "First spacecraft docking",
+            ]
         }
     ]
 
