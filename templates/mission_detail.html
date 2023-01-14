@@ -30,8 +30,12 @@
             <p class="launch-date">Launch Date: {{ mission.launch_date }}</p>
             <p class="mission-description">{{ mission.description }}</p>
             <div class="mission-link-container">
-                <a class="mission-link" href="/mission/{{ mission.id - 1 }}"><< Previous Mission</a>
-                <a class="mission-link" href="/mission/{{ mission.id + 1 }}">Next Mission >></a>
+                {% if mission.id != 1 %}
+                    <a class="mission-link" href="/mission/{{ mission.id - 1 }}"><< Previous Mission</a>
+                {% endif %}
+                {% if mission.id != total_missions %}
+                    <a class="mission-link" href="/mission/{{ mission.id + 1 }}">Next Mission >></a>
+                {% endif %}
             </div>
 
         </main>

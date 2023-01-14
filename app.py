@@ -43,8 +43,9 @@ def mission_detail(id):
     try:
         mission = get_mission_data(id)
         if mission:
+            total_missions = len(get_mission_data())
             keywords = ', '.join(mission['keywords'])
-            return render_template('mission_detail.html', mission=mission, keywords=keywords)
+            return render_template('mission_detail.html', mission=mission, keywords=keywords, total_missions=total_missions)
         else:
             return render_template('error.html',error_message="Mission not found"),404
     except Exception as e:

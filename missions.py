@@ -88,7 +88,7 @@ def get_mission_data(id=None):
                 "15 minutes 22 seconds",
                 "116 miles"
             ],
-            'era': 'space race'
+            'era': 'Space Race'
         },
         {
             'id': 5,
@@ -107,7 +107,7 @@ def get_mission_data(id=None):
                 "24 hours 17 minutes",
                 "200 miles"
             ],
-            'era': 'space race'
+            'era': 'Space Race'
         },
         {
             'id': 6,
