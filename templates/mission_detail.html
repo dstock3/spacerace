@@ -27,7 +27,7 @@
         <main class="mission-detail-container">
             <h1 class="mission-head">{{ mission.name }}</h1>
             <div class="mission-pic-container">
-                <img src="" alt="{{ mission.meta }}">
+                <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ mission.meta }}">
             </div>
             <p class="mission-era">Era: {{ mission.era }}</p>
             <p class="launch-date">Launch Date: {{ mission.launch_date }}</p>

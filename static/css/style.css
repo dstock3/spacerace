@@ -118,6 +118,17 @@ h1 {
     padding: 20px;
 }
 
+.mission-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-pic-container img {
+    max-width: 85%;
+    max-height: 85%;
+}
+
 .mission-link-container {
     padding: 15px;
     background-color: rgb(134, 134, 247);

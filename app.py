@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for
 from missions import get_mission_data
 from trivia import trivia_questions
+import glob
 
 app = Flask(__name__)
 
@@ -45,7 +46,9 @@ def mission_detail(id):
         if mission:
             total_missions = len(get_mission_data())
             keywords = ', '.join(mission['keywords'])
-            return render_template('mission_detail.html', mission=mission, keywords=keywords, total_missions=total_missions)
+            image_path = glob.glob(f'static/images/{id}.*')[0]
+            image = image_path.split("/")[-1]
+            return render_template('mission_detail.html', mission=mission, keywords=keywords, total_missions=total_missions, image=image)
         else:
             return render_template('error.html',error_message="Mission not found"),404
     except Exception as e:
