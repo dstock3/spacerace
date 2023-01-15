@@ -113,6 +113,7 @@ h1 {
 .mission-detail-container {
     align-self: center;
     width: 50%;
+    height: 100vh;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.425);
     padding: 20px;
@@ -125,8 +126,8 @@ h1 {
 }
 
 .mission-pic-container img {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 75%;
+    max-height: 100%;
 }
 
 .mission-link-container {
