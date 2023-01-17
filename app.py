@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, url_for
 from missions import get_mission_data
 from trivia import trivia_questions
-import glob
+from glob import glob
+import os
 
 app = Flask(__name__)
 
@@ -32,8 +33,17 @@ def trivia():
 
 @app.route('/timeline')
 def timeline():
-    missions = get_mission_data()
-    return render_template('timeline.html', missions=missions)
+    mission_data = get_mission_data()
+    images = glob("static/images/*")
+    for mission in mission_data:
+        for image in images:
+            filename, file_extension = os.path.splitext(os.path.basename(image))
+            if filename == str(mission['id']):
+                mission['image'] = image
+                break
+    return render_template('timeline.html', missions=mission_data)
+
+
 
 @app.route('/info')
 def info():
