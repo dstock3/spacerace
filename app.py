@@ -8,7 +8,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    images = my_glob("static/images/*")
+    mission_data = get_mission_data()
+
+    imagePaths = my_glob("static/images/*")
+    images = []
+    for mission in mission_data:
+        print(mission)
+        for image in imagePaths:
+            filename, file_extension = os.path.splitext(os.path.basename(image))
+            if filename == str(mission['id']):
+                images.append({'url': image, 'alt': mission['meta']})
+                break
     
     return render_template('index.html', images=images)
 

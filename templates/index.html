@@ -6,7 +6,7 @@
 {% block content %}
     <div class="slideshow">
         {% for image in images %}
-            <img src="{{ image }}">
+            <img src="{{ image.url }}" alt="{{ image.alt }}">
         {% endfor %}
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
