@@ -8,11 +8,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    images = [
-        {'url': url_for('static', filename='images/image1.jpg'), 'alt': 'image 1'},
-        {'url': url_for('static', filename='images/image2.jpg'), 'alt': 'image 2'},
-        {'url': url_for('static', filename='images/image3.jpg'), 'alt': 'image 3'}
-    ]
+    images = my_glob("static/images/*")
+    
     return render_template('index.html', images=images)
 
 @app.route('/trivia', methods=['GET', 'POST'])
