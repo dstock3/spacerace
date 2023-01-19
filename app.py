@@ -9,18 +9,16 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     mission_data = get_mission_data()
+    images = {}
+    for image in my_glob("static/images/*"):
+        filename, file_extension = os.path.splitext(os.path.basename(image))
+        images[filename] = image
 
-    imagePaths = my_glob("static/images/*")
-    images = []
+    final_images = []
     for mission in mission_data:
-        print(mission)
-        for image in imagePaths:
-            filename, file_extension = os.path.splitext(os.path.basename(image))
-            if filename == str(mission['id']):
-                images.append({'url': image, 'alt': mission['meta']})
-                break
+        final_images.append({'url': images[str(mission['id'])], 'alt': mission['meta']})
     
-    return render_template('index.html', images=images)
+    return render_template('index.html', images=final_images)
 
 @app.route('/trivia', methods=['GET', 'POST'])
 def trivia():
