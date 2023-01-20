@@ -386,4 +386,4 @@ def get_mission_data(id=None):
     for mission in missions:
         if mission['id'] == id:
             return mission
-    return None
+    raise ValueError(f'No mission found with id: {id}')
