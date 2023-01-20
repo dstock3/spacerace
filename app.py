@@ -4,16 +4,19 @@ from trivia import trivia_questions
 from glob import glob as my_glob
 import os
 
+def get_mission_images():
+    images = {}
+    for image in my_glob("static/images/*"):
+        filename, file_extension = os.path.splitext(os.path.basename(image))
+        images[filename] = image
+    return images
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     mission_data = get_mission_data()
-    images = {}
-    for image in my_glob("static/images/*"):
-        filename, file_extension = os.path.splitext(os.path.basename(image))
-        images[filename] = image
-
+    images = get_mission_images()
     final_images = []
     for mission in mission_data:
         final_images.append({'url': images[str(mission['id'])], 'alt': mission['meta']})
@@ -39,13 +42,9 @@ def trivia():
 @app.route('/timeline')
 def timeline():
     mission_data = get_mission_data()
-    images = my_glob("static/images/*")
+    images = get_mission_images()
     for mission in mission_data:
-        for image in images:
-            filename, file_extension = os.path.splitext(os.path.basename(image))
-            if filename == str(mission['id']):
-                mission['image'] = image
-                break
+        mission['image'] = images[str(mission['id'])]
     return render_template('timeline.html', missions=mission_data)
 
 @app.route('/info')
