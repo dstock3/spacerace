@@ -7,13 +7,13 @@
         
         <script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
         
-        <meta name="description" content="Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War.">
-        
-        <meta name="keywords" content="space race, history, Cold War, United States, Soviet Union, space exploration">
+        <meta name="description" content="{% block description %}{% endblock %}">
 
-        <meta property="og:title" content="History of the Space Race">
+        <meta name="keywords" content="{% block keywords %}{% endblock %}">
+
+        <meta property="og:title" content="{% block title %}{% endblock %}">
         
-        <meta property="og:description" content="Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War.">
+        <meta property="og:description" content="{% block description %}{% endblock %}">
     </head>
     <body class="{% block body_class %}{% endblock %}">
         <header>
