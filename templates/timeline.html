@@ -1,62 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="/static/css/style.css">
-        
-        <link rel="stylesheet" href="/static/css/timeline.css">
-        
-        <title>Space Race Timeline</title>
-        
-        <meta name="description" content="Explore the history of the space race through the timeline of significant events and missions from the 1950s to the 1970s. Follow the competition between the United States and the Soviet Union as they advanced in space exploration during the Cold War.">
-        
-        <meta name="keywords" content="space race, history, Cold War, United States, Soviet Union, space exploration, space race timeline">
-
-        <meta property="og:title" content="pace Race Timeline">
-        
-        <meta property="og:description" content="Explore the history of the space race through the timeline of significant events and missions from the 1950s to the 1970s. Follow the competition between the United States and the Soviet Union as they advanced in space exploration during the Cold War.">
-    </head>
-    <body class="timeline">
-        <header>
-            <h1>Space Race Timeline</h1>
-            <div class="dec-line"></div>
-            <nav class="home-nav">
-                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" aria-label="Home" href="/">Home</a>
-                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" aria-label="Timeline" href="/timeline">Timeline</a>
-                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" aria-label="Trivia" href="/trivia">Trivia</a>
-                <a class="nav-link {% if request.path == '/info' %}selected{% endif %}" aria-label="Information" href="/info">Information</a>
-            </nav>
-        </header>
-        <main class="timeline-container">
-            <ul class="timeline-list">
-                {% for mission in missions|sort(attribute='launch_date') %}
-                    <li class="timeline-item-container">
-                        <div class="timeline-item" style="background-image: url({{ mission.image }});">
-                            <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
-                            <p class="launch-date">{{ mission.launch_date }}</p>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-        </main>
-        <footer>
-            <div class="attribution">
-                Created by David Stockdale.
-            </div>
-            <div class="social-links">
-                <a class="social-link" href="https://github.com/dstock3" target="_blank" rel="noopener noreferrer">
-                    Github
-                    <!-- 
-                    <img class="github-icon" src={githubIcon} alt="github icon"></img>
-                    -->
-                </a>
-                <a class="social-link" href="https://davestockdale.io/" target="_blank" rel="noopener noreferrer">
-                    Portfolio
-                    <!-- 
-                    <img class="code-icon" src={codeIcon} alt="code icon"></img>
-                    -->
-                </a>
-            </div>
-        </footer>
-        <script src="/static/js/timeline.js"></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Space Race Timeline{% endblock %}
+{% block meta_title %}Space Race Timeline{% endblock %}
+{% block link %}/static/css/timeline.css{% endblock %}
+{% block description %}"Explore the history of the space race through the timeline of significant events and missions from the 1950s to the 1970s. Follow the competition between the United States and the Soviet Union as they advanced in space exploration during the Cold War."{% endblock %}
+{% block meta_description %}"Explore the history of the space race through the timeline of significant events and missions from the 1950s to the 1970s. Follow the competition between the United States and the Soviet Union as they advanced in space exploration during the Cold War."{% endblock %}
+{% block keywords %}"space race, history, Cold War, United States, Soviet Union, space exploration, space race timeline"{% endblock %}
+{% block body_class %}timeline{% endblock %}
+{% block main_class %}timeline-container{% endblock %}
+{% block header %}Space Race Timeline{% endblock %}
+{% block content %}
+    <ul class="timeline-list">
+        {% for mission in missions|sort(attribute='launch_date') %}
+            <li class="timeline-item-container">
+                <div class="timeline-item" style="background-image: url({{ mission.image }});">
+                    <a class="mission-link" href="/mission/{{ mission.id }}">{{ mission.name }}</a>
+                    <p class="launch-date">{{ mission.launch_date }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+{% block script %}/static/js/timeline.js{% endblock %}
