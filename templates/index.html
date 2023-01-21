@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}History of the Space Race{% endblock %}
+{% block meta_title %}History of the Space Race{% endblock %}
+{% block link %}{{ url_for('static', filename='css/slick.css') }}{% endblock %}
+{% block description %}"Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War."{% endblock %}
+{% block meta_description %}"Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War."{% endblock %}
+{% block keywords %}"space race, history, Cold War, United States, Soviet Union, space exploration"{% endblock %}
 {% block body_class %}homepage{% endblock %}
 {% block main_class %}homepage-container{% endblock %}
-{% block description %}"Learn about the history of the space race, a period of intense competition between the United States and the Soviet Union to advance in space exploration during the Cold War."{% endblock %}
-{% block keywords %}"space race, history, Cold War, United States, Soviet Union, space exploration"{% endblock %}
 {% block header %}History of the Space Race{% endblock %}
 {% block content %}
     <div class="slideshow">
