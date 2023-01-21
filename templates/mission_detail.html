@@ -1,66 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="/static/css/style.css">
-        
-        <title>{{ mission.name }}</title>
-
-        <meta name="description" content="{{ mission.meta }}">
-        
-        <meta name="keywords" content="{{ keywords }}">
-
-        <meta property="og:title" content="{{ mission.name }}">
-        
-        <meta property="og:description" content="{{ mission.meta }}">
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to the Space Race</h1>
-            <div class="dec-line"></div>
-            <nav class="home-nav">
-                <a class="nav-link {% if request.path == '/' %}selected{% endif %}" aria-label="Home" href="/">Home</a>
-                <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" aria-label="Timeline" href="/timeline">Timeline</a>
-                <a class="nav-link {% if request.path == '/trivia' %}selected{% endif %}" aria-label="Trivia" href="/trivia">Trivia</a>
-                <a class="nav-link {% if request.path == '/info' %}selected{% endif %}" aria-label="Information" href="/info">Information</a>
-            </nav>
-        </header>
-        <main class="mission-detail-container">
-            <h1 class="mission-head">{{ mission.name }}</h1>
-            <div class="mission-pic-container">
-                <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ mission.meta }}">
-            </div>
-            <p class="mission-era">Era: {{ mission.era }}</p>
-            <p class="launch-date">Launch Date: {{ mission.launch_date }}</p>
-            <p class="mission-description">{{ mission.description }}</p>
-            <div class="mission-link-container">
-                {% if mission.id != 1 %}
-                    <a class="mission-link" href="/mission/{{ mission.id - 1 }}"><< Previous Mission</a>
-                {% endif %}
-                {% if mission.id != total_missions %}
-                    <a class="mission-link" href="/mission/{{ mission.id + 1 }}">Next Mission >></a>
-                {% endif %}
-            </div>
-
-        </main>
-        <footer>
-            <div class="attribution">
-                Created by David Stockdale.
-            </div>
-            <div class="social-links">
-                <a class="social-link" href="https://github.com/dstock3" target="_blank" rel="noopener noreferrer">
-                    Github
-                    <!-- 
-                    <img class="github-icon" src={githubIcon} alt="github icon"></img>
-                    -->
-                </a>
-                <a class="social-link" href="https://davestockdale.io/" target="_blank" rel="noopener noreferrer">
-                    Portfolio
-                    <!-- 
-                    <img class="code-icon" src={codeIcon} alt="code icon"></img>
-                    -->
-                </a>
-            </div>
-        </footer>
-        <script src="/static/js/missionDetail.js"></script>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}{{ mission.name }}{% endblock %}
+{% block meta_title %}{{ mission.name }}{% endblock %}
+{% block description %}{{ mission.meta }}{% endblock %}
+{% block meta_description %}{{ mission.meta }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block body_class %}mission-detail{% endblock %}
+{% block main_class %}mission-detail-container{% endblock %}
+{% block header %}History of the Space Race{% endblock %}
+{% block content %}
+    <div class="mission-pic-container">
+        <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ mission.meta }}">
+    </div>
+    <p class="mission-era">Era: {{ mission.era }}</p>
+    <p class="launch-date">Launch Date: {{ mission.launch_date }}</p>
+    <p class="mission-description">{{ mission.description }}</p>
+    <div class="mission-link-container">
+        {% if mission.id != 1 %}
+            <a class="mission-link" href="/mission/{{ mission.id - 1 }}"><< Previous Mission</a>
+        {% endif %}
+        {% if mission.id != total_missions %}
+            <a class="mission-link" href="/mission/{{ mission.id + 1 }}">Next Mission >></a>
+        {% endif %}
+    </div>
+{% endblock %}
+{% block script %}/static/js/missionDetail.js{% endblock %}

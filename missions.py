@@ -111,6 +111,44 @@ def get_mission_data(id=None):
         },
         {
             'id': 6,
+            'name': 'Gemini 4',
+            'launch_date': '1965-06-03',
+            'description': "Gemini 4 was a manned spaceflight of the United States, launched on June 3, 1965. It was the second manned mission of the Gemini program, and astronaut Edward White became the first American astronaut to perform a spacewalk. The mission lasted for four days and orbited the Earth 66 times. Gemini 4 was a major achievement for the United States in the space race, as it demonstrated the capabilities of the Gemini spacecraft and the ability of American astronauts to perform spacewalks.",
+            'meta': "Gemini 4 was the second manned mission of the Gemini program, astronaut Edward White performed the first American spacewalk and orbited the Earth for 4 days in 1965.",
+            'keywords': [
+                "United States",
+                "Space exploration",
+                "Human spaceflight",
+                "Gemini program",
+                "Edward White",
+                "Spacewalk",
+                "Jim McDivitt",
+                "NASA",
+                "Space Race",
+                "First American spacewalk",
+            ]
+        },
+        {
+            'id': 7,
+            'name': 'Gemini 8',
+            'launch_date': '1966-03-16',
+            'description': "Gemini 8 was a manned spaceflight of the United States, launched on March 16, 1966. It was the sixth manned mission of the Gemini program, and astronaut Neil Armstrong became the first person to dock two spacecraft in space. The mission lasted for just under 12 hours before an emergency splashdown. Gemini 8 was a major achievement for the United States in the space race, as it demonstrated the capabilities of the Gemini spacecraft and the ability of American astronauts to perform docking maneuvers.",
+            'meta': "Gemini 8 was the sixth manned mission of the Gemini program, astronaut Neil Armstrong became the first person to dock two spacecraft in space. The mission lasted for 12 hours before an emergency splashdown in 1966.",
+            'keywords': [
+                "United States",
+                "Space exploration",
+                "Human spaceflight",
+                "Gemini program",
+                "Neil Armstrong",
+                "Docking",
+                "David Scott",
+                "NASA",
+                "Space Race",
+                "First spacecraft docking",
+            ]
+        },
+        {
+            'id': 8,
             'name': 'Apollo 11',
             'launch_date': '1969-07-16',
             'description': "Apollo 11 was a NASA mission that launched on July 16, 1969. It was the first manned mission to land on the Moon, piloted by Neil Armstrong and Buzz Aldrin. Armstrong became the first human to set foot on the Moon, famously saying, 'That's one small step for man, one giant leap for mankind.' The mission was a major milestone in the space race and solidified the United States as a leader in space exploration.",
@@ -133,7 +171,7 @@ def get_mission_data(id=None):
             'era': 'Space Race'
         },
         {
-            'id': 7,
+            'id': 9,
             'name': 'Skylab',
             'launch_date': '1973-05-14',
             'description': "Skylab was a space station launched by NASA in 1973. It was the first space station operated by the United States and was designed to be a manned laboratory for studying the effects of long-term space flight on humans. It contained living quarters, a workshop, and various scientific instruments. Skylab orbited Earth for six years and was visited by three manned missions, during which astronauts conducted experiments in a variety of fields including solar physics, Earth observations, and medical studies. The space station was decommissioned in 1979 and re-entered the Earth's atmosphere, with most of its debris falling harmlessly into the Indian Ocean and Western Australia.",
@@ -155,7 +193,7 @@ def get_mission_data(id=None):
             'era': 'Space Race'
         },
         {
-            'id': 8,
+            'id': 10,
             'name': 'Apollo-Soyuz Test Project',
             'launch_date': '1975-07-15',
             'description': "The Apollo-Soyuz Test Project was a joint space mission between the United States and Soviet Union. Launched on July 15, 1975, it was the first international manned space flight and marked the end of the space race between the two nations. The mission consisted of the American Apollo spacecraft and the Soviet Soyuz spacecraft docking in orbit and the exchange of two astronaut crews. The mission was seen as a symbol of the improving relations between the United States and Soviet Union during the Cold War.",
@@ -177,7 +215,7 @@ def get_mission_data(id=None):
             'era': 'Space Race'
         },
         {
-            'id': 9,
+            'id': 11,
             'name': 'Voyager 1',
             'launch_date': '1977-09-05',
             'description': "Voyager 1 is a space probe launched by NASA on September 5, 1977. It was designed to study the outer solar system and interstellar space. The probe carries a golden record containing images and sounds that represent Earth and humanity, in the event that it is found by extraterrestrial life. Voyager 1 became the first human-made object to leave the Solar System and is still in operation today, sending back valuable data about interstellar space.",
@@ -199,7 +237,7 @@ def get_mission_data(id=None):
             'era': 'Post Space Race'
         },
         {
-            'id': 10,
+            'id': 12,
             'name': 'Mir',
             'launch_date': '1986-02-19',
             'description': 'The first modular space station, launched by the Soviet Union in 1986. Mir was in operation for 15 years, during which time it was visited by a total of 28 long-term expeditions and over 100 short-term missions. It was also the site of various space-based scientific experiments, as well as being the first space station to be visited by space shuttles from the United States. Mir was decommissioned in 2001 and deorbited in March of that year.',
@@ -220,7 +258,7 @@ def get_mission_data(id=None):
             'era': 'Post Space Race'
         },
         {
-            'id': 11,
+            'id': 13,
             'name': 'Hubble Space Telescope',
             'launch_date': '1990-04-24',
             'description': "The Hubble Space Telescope is a telescope in orbit around Earth, launched into space in 1990. It is named after the American astronomer Edwin Hubble and is one of the most important astronomical instruments in history. The telescope is capable of capturing images of distant galaxies and has made many groundbreaking discoveries, such as the accelerating expansion of the universe. It has also been instrumental in the study of black holes and dark matter.",
@@ -241,7 +279,7 @@ def get_mission_data(id=None):
             'era': 'Post Space Race'
         },
         {
-            'id': 12,
+            'id': 14,
             'name': 'International Space Station',
             'launch_date': '1998-11-20',
             'description': 'The International Space Station (ISS) is a habitable, habitable spacecraft that orbits Earth and is home to a rotating crew of astronauts from various countries. The ISS is a collaboration between NASA, the Russian space agency Roscosmos, the European Space Agency, the Japanese space agency JAXA, and the Canadian space agency CSA. It was launched in 1998 and has been continuously inhabited since 2000, making it the longest-occupied space station in history. The ISS is used for research in a variety of fields, including biology, physics, and astronomy, as well as for testing new technologies and conducting experiments in microgravity. The ISS is an important symbol of international cooperation in space exploration, and it serves as a stepping stone for future human missions to other destinations in the solar system.',
@@ -267,7 +305,7 @@ def get_mission_data(id=None):
             'era': 'Post Space Race'
         },
         {
-            'id': 13,
+            'id': 15,
             'name': 'Mars Curiosity Rover',
             'launch_date': '2011-11-26',
             'description': "The Mars Curiosity Rover is a robotic vehicle designed to explore the surface of Mars and search for signs of past or present microbial life. It was launched in 2011 and has been active on the surface of Mars ever since. The rover is equipped with a variety of scientific instruments and tools, including cameras, spectrometers, and drill bits, which it uses to analyze the chemical and mineral composition of rocks and soil. It is also equipped with a weather station and a laser-induced breakdown spectroscope, which it uses to study the planet's atmosphere and search for organic molecules. The rover's primary mission is to determine whether Mars has ever had the potential to support microbial life, and to help pave the way for future manned missions to the planet.",
@@ -294,7 +332,7 @@ def get_mission_data(id=None):
             'era': 'Post Space Race'
         },
         {
-            'id': 14,
+            'id': 16,
             'name': "Chang'e 4",
             'launch_date': '2018-12-07',
             'description': "Chang'e 4 is a Chinese lunar exploration mission that aims to land a rover on the far side of the Moon. The mission, which was launched on December 7, 2018, is named after the Chinese moon goddess Chang'e. The mission's primary goals include conducting scientific research on the Moon's composition, studying the interaction between solar wind and the lunar surface, and searching for resources that could be used in future lunar exploration missions. Additionally, Chang'e 4 aims to demonstrate the feasibility of using the far side of the Moon as a base for future space exploration. The mission successfully landed on the far side of the Moon on January 3, 2019, making it the first spacecraft to do so.",
@@ -317,7 +355,7 @@ def get_mission_data(id=None):
             'era': 'Post Space Race'
         },
         {
-            'id': 15,
+            'id': 17,
             'name': 'Artemis 1',
             'launch_date': '2022-11-01',
             'description': 'Artemis 1 is a mission planned by NASA as part of the Artemis program, which aims to land humans on the Moon by 2024. Artemis 1 is an unmanned test flight of the Space Launch System rocket and the Orion spacecraft, which will be used for future manned missions to the Moon and potentially beyond. The mission will also include a number of scientific payloads to study the lunar environment and collect data for future missions. Artemis 1 is currently scheduled to launch in November 2022.',
@@ -339,44 +377,6 @@ def get_mission_data(id=None):
                 "Artemis program"
             ],
             'era': 'Post Space Race'
-        },
-        {
-            'id': 16,
-            'name': 'Gemini 4',
-            'launch_date': '1965-06-03',
-            'description': "Gemini 4 was a manned spaceflight of the United States, launched on June 3, 1965. It was the second manned mission of the Gemini program, and astronaut Edward White became the first American astronaut to perform a spacewalk. The mission lasted for four days and orbited the Earth 66 times. Gemini 4 was a major achievement for the United States in the space race, as it demonstrated the capabilities of the Gemini spacecraft and the ability of American astronauts to perform spacewalks.",
-            'meta': "Gemini 4 was the second manned mission of the Gemini program, astronaut Edward White performed the first American spacewalk and orbited the Earth for 4 days in 1965.",
-            'keywords': [
-                "United States",
-                "Space exploration",
-                "Human spaceflight",
-                "Gemini program",
-                "Edward White",
-                "Spacewalk",
-                "Jim McDivitt",
-                "NASA",
-                "Space Race",
-                "First American spacewalk",
-            ]
-        },
-        {
-            'id': 17,
-            'name': 'Gemini 8',
-            'launch_date': '1966-03-16',
-            'description': "Gemini 8 was a manned spaceflight of the United States, launched on March 16, 1966. It was the sixth manned mission of the Gemini program, and astronaut Neil Armstrong became the first person to dock two spacecraft in space. The mission lasted for just under 12 hours before an emergency splashdown. Gemini 8 was a major achievement for the United States in the space race, as it demonstrated the capabilities of the Gemini spacecraft and the ability of American astronauts to perform docking maneuvers.",
-            'meta': "Gemini 8 was the sixth manned mission of the Gemini program, astronaut Neil Armstrong became the first person to dock two spacecraft in space. The mission lasted for 12 hours before an emergency splashdown in 1966.",
-            'keywords': [
-                "United States",
-                "Space exploration",
-                "Human spaceflight",
-                "Gemini program",
-                "Neil Armstrong",
-                "Docking",
-                "David Scott",
-                "NASA",
-                "Space Race",
-                "First spacecraft docking",
-            ]
         }
     ]
 
