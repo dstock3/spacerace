@@ -4,16 +4,25 @@
     display: flex;
 }
 
-h2 {
+.info-head {
     color:rgb(134, 134, 247);
 }
 
-.info-container ul {
+.info-list {
+    height: 100%;
+    width: 85%;
     list-style: none;
     border-radius: 15px;
     background-color: rgb(134, 134, 247);
+    display: flex;
+    flex-direction: column;
 }
 
-a {
+.info-item {
+    margin-block: 5px;
+}
+
+.info-link {
     font-weight: bold;
+    color: black;
 }
