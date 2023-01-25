@@ -8,9 +8,14 @@
     color:rgb(134, 134, 247);
 }
 
+.first {
+    padding-top: 15px;
+}
+
 .info-list {
     height: 100%;
-    width: 85%;
+    width: 15%;
+    margin-inline: 15px;
     list-style: none;
     border-radius: 15px;
     background-color: rgb(134, 134, 247);
