@@ -1,0 +1,19 @@
+.info-container {
+    color: black;
+    height: 75%;
+    display: flex;
+}
+
+h2 {
+    color:rgb(134, 134, 247);
+}
+
+.info-container ul {
+    list-style: none;
+    border-radius: 15px;
+    background-color: rgb(134, 134, 247);
+}
+
+a {
+    font-weight: bold;
+}
