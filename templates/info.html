@@ -13,7 +13,7 @@
     <ul class="info-list">
         {% for info_data in info %}
             <li class="info-item">
-                <a class="info-link" href=info_data.href target="_blank" rel="noopener noreferrer">{{ info_data.desc }}</a>
+                <a class="info-link" href={{ info_data.href }} target="_blank" rel="noopener noreferrer">{{ info_data.desc }}</a>
             </li>
         {% endfor %}
     </ul>
