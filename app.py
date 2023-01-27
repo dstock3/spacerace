@@ -66,6 +66,5 @@ def mission_detail(id):
     except Exception as e:
         return render_template('error.html',error_message=str(e)), 500
 
-
 if __name__ == '__main__':
     app.run(debug=True)
