@@ -1,6 +1,6 @@
 .info-container {
     color: black;
-    height: 75%;
+    height: 65%;
     display: flex;
 }
 
@@ -14,7 +14,7 @@ li:first-child {
 
 .info-list {
     height: 100%;
-    width: 15%;
+    width: 25%;
     margin-inline: 15px;
     list-style: none;
     border-radius: 15px;
