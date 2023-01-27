@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for
 from missions import get_mission_data
+from info import get_info_data
 from trivia import trivia_questions
 from glob import glob as my_glob
 import os
@@ -49,7 +50,8 @@ def timeline():
 
 @app.route('/info')
 def info():
-    return render_template('info.html')
+    info_data = get_info_data()
+    return render_template('info.html', info=info_data)
 
 @app.route('/mission/<int:id>')
 def mission_detail(id):

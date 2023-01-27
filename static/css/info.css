@@ -8,7 +8,7 @@
     color:rgb(134, 134, 247);
 }
 
-.first {
+li:first-child {
     padding-top: 15px;
 }
 

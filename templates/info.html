@@ -11,14 +11,10 @@
 {% block content %}
     <h2 class="info-head">Important Links</h2>
     <ul class="info-list">
-        <li class="info-item first">
-            <a class="info-link" href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA</a>
-        </li>
-        <li class="info-item">
-            <a class="info-link" href="https://www.space.com/" target="_blank" rel="noopener noreferrer">Space.com</a>
-        </li>
-        <li class="info-item">
-            <a class="info-link" href="https://history.nasa.gov/alsj/a11/images11.html" target="_blank" rel="noopener noreferrer">Apollo 11 Image Library</a>
-        </li>
+        {% for info_data in info %}
+            <li class="info-item">
+                <a class="info-link" href=info_data.href target="_blank" rel="noopener noreferrer">{{ info_data.desc }}</a>
+            </li>
+        {% endfor %}
     </ul>
 {% endblock %}
