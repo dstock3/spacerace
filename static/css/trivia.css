@@ -68,7 +68,7 @@ button {
 
 @media only screen and (max-width: 400px) {
     .trivia-question p {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .trivia-options {
@@ -76,15 +76,15 @@ button {
     }
     
     .trivia-option {
-        height: 35px;
+        height: 30px;
         padding: 5px;
     }
     
     .question-prompt {
-        width: 90%;
+        width: 80%;
     }
     
     button {
-        width: 35%;
+        width: 30%;
     }
 }
