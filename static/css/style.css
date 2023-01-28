@@ -149,3 +149,22 @@ h1 {
     width: 100%;
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .slideshow {
+        width: 300px;
+        height: 200px;
+    }
+
+    .space-info-container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

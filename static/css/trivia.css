@@ -65,3 +65,26 @@ button {
     cursor: pointer;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 400px) {
+    .trivia-question p {
+        font-size: 25px;
+    }
+
+    .trivia-options {
+        width: 90%;
+    }
+    
+    .trivia-option {
+        height: 35px;
+        padding: 5px;
+    }
+    
+    .question-prompt {
+        width: 90%;
+    }
+    
+    button {
+        width: 35%;
+    }
+}
