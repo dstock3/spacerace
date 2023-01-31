@@ -2,6 +2,7 @@
     color: black;
     height: 65%;
     display: flex;
+    transition: color 0.5s ease;
 }
 
 .info-head {
@@ -21,10 +22,19 @@ li:first-child {
     background-color: rgb(134, 134, 247);
     display: flex;
     flex-direction: column;
+    transition: all 0.5s ease-in-out;
 }
 
 .info-item {
     margin-block: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.info-item:hover {
+    background-color: rgb(104, 104, 217);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .info-link {
