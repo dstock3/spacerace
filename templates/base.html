@@ -20,7 +20,7 @@
     <body class="{% block body_class %}{% endblock %}">
         <header>
             <h1>{% block header %}{% endblock %}</h1>
-            <div class="dec-line"></div>
+            
             <nav class="home-nav">
                 <a class="nav-link {% if request.path == '/' %}selected{% endif %}" aria-label="Home" href="/">Home</a>
                 <a class="nav-link {% if request.path == '/timeline' %}selected{% endif %}" aria-label="Timeline" href="/timeline">Timeline</a>
