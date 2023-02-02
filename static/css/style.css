@@ -206,6 +206,39 @@ h1 {
     text-align: center;
 }
 
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+
+
+.slides img {
+    display: none;
+}
+
+.slides img:first-child {
+    display: block;
+}
+  
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
 @media (max-width: 600px) {
     body {
         font-size: 16px;
