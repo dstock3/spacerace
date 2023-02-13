@@ -1,18 +1,21 @@
-var slideIndex = 0;
+let slideIndex = 0;
 let timeout;
 
-function showSlides() {
+const showSlides = () => {
   let i;
   let slides = Array.from(document.querySelector(".slides").children);
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex >= slides.length) {
+  
+  if (slideIndex >= slides.length - 1) {
     slideIndex = 0;
   }
+  
   slides[slideIndex].style.display = "block";
   timeout = setTimeout(showSlides, 6000);
+  return timeout
 }
 
 let images = document.querySelectorAll("img");
@@ -24,25 +27,27 @@ images.forEach(img => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  var back = document.querySelector('.back');
-  var forward = document.querySelector('.forward');
-  var slides = Array.from(document.querySelector(".slides").children);
+  let back = document.querySelector('.back');
+  let forward = document.querySelector('.forward');
+  let slides = Array.from(document.querySelector(".slides").children);
 
   back.addEventListener('click', function() {
-    clearTimeout(timeout);
-    slideIndex--;
+    
     if (slideIndex < 0) {
       slideIndex = slides.length - 1;
+
     }
-    showSlides();
+    let timeout = showSlides();
+    clearTimeout(timeout);
   });
 
   forward.addEventListener('click', function() {
-    clearTimeout(timeout);
+
     slideIndex++;
     if (slideIndex >= slides.length) {
       slideIndex = 0;
     }
-    showSlides();
+    let timeout = showSlides();
+    clearTimeout(timeout);
   });
 });

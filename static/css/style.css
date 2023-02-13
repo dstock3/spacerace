@@ -207,7 +207,7 @@ h1 {
 }
 
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 45%;
     position: relative;
     margin: auto;
   }
@@ -284,9 +284,8 @@ h1 {
         width: 100%;
     }
     
-    .slideshow {
-        width: 300px;
-        height: 200px;
+    .slideshow-container {
+        width: 95%;
     }
     
     .space-info-container {
