@@ -1,21 +1,31 @@
-let slideIndex = 0;
+var slideIndex = 0;
 let timeout;
 
-const showSlides = () => {
-  let i;
+function showSlides(dir) {
   let slides = Array.from(document.querySelector(".slides").children);
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
   
-  if (slideIndex >= slides.length - 1) {
-    slideIndex = 0;
+  if (dir === "back") {
+    slideIndex--;
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+  } else if (dir === "forward") {
+    slideIndex++;
+    if (slideIndex === slides.length) {
+      slideIndex = 0;
+    }
+  } else {
+    slideIndex++;
+    if (slideIndex === slides.length) {
+      slideIndex = 0;
+    }
   }
-  
+
   slides[slideIndex].style.display = "block";
   timeout = setTimeout(showSlides, 6000);
-  return timeout
 }
 
 let images = document.querySelectorAll("img");
@@ -27,27 +37,17 @@ images.forEach(img => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  let back = document.querySelector('.back');
-  let forward = document.querySelector('.forward');
-  let slides = Array.from(document.querySelector(".slides").children);
+  var back = document.querySelector('.back');
+  var forward = document.querySelector('.forward');
+  var slides = Array.from(document.querySelector(".slides").children);
 
   back.addEventListener('click', function() {
-    
-    if (slideIndex < 0) {
-      slideIndex = slides.length - 1;
-
-    }
-    let timeout = showSlides();
     clearTimeout(timeout);
+    showSlides("back");
   });
 
   forward.addEventListener('click', function() {
-
-    slideIndex++;
-    if (slideIndex >= slides.length) {
-      slideIndex = 0;
-    }
-    let timeout = showSlides();
     clearTimeout(timeout);
+    showSlides("forward");
   });
 });
