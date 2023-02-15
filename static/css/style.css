@@ -210,15 +210,31 @@ h1 {
     max-width: 45%;
     position: relative;
     margin: auto;
-  }
-  
+}
+
+.slides {
+    overflow: hidden;
+    animation-duration: 5s;
+}
 
 .slides img {
     display: none;
+    animation: zoom-in 5s forwards;
+    
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
 }
 
 .slides img:first-child {
     display: block;
+    
 }
   
 .fade {
