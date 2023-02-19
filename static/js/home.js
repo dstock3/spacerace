@@ -1,9 +1,10 @@
-var slideIndex = 0;
+let slideIndex = 0;
 let timeout;
 
 function showSlides(dir) {
-  let slides = Array.from(document.querySelector(".slides").children);
+  const slides = Array.from(document.querySelector(".slides").children);
   for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("fade");
     slides[i].style.display = "none";
   }
   
@@ -23,13 +24,14 @@ function showSlides(dir) {
       slideIndex = 0;
     }
   }
-
+  
   slides[slideIndex].style.display = "block";
-  timeout = setTimeout(showSlides, 6000);
+  slides[slideIndex].classList.add("fade");
+  timeout = setTimeout(showSlides, 8000);
 }
 
-let images = document.querySelectorAll("img");
-let parent = document.querySelector(".slideshow-container");
+const images = document.querySelectorAll("img");
+const parent = document.querySelector(".slideshow-container");
 
 images.forEach(img => {
   img.style.width = `${parent.offsetWidth}px`;
@@ -37,9 +39,9 @@ images.forEach(img => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  var back = document.querySelector('.back');
-  var forward = document.querySelector('.forward');
-  var slides = Array.from(document.querySelector(".slides").children);
+  const back = document.querySelector('.back');
+  const forward = document.querySelector('.forward');
+  const slides = Array.from(document.querySelector(".slides").children);
 
   back.addEventListener('click', function() {
     clearTimeout(timeout);
@@ -51,3 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlides("forward");
   });
 });
+timeout = setTimeout(showSlides, 8000);
+
+
