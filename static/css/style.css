@@ -164,6 +164,13 @@ h1 {
     width: 15%;
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.social-links img {
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .mission-detail-container {
@@ -232,7 +239,7 @@ h1 {
     
     }
     100% {
-        opacity: 0.55;
+        opacity: 0.95;
         transform: scale(1.00);
     }
 }
