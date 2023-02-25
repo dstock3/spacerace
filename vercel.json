@@ -1,0 +1,37 @@
+{
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "10mb"
+        }
+      },
+      {
+        "use": "@vercel/static",
+        "src": "static/**/*",
+        "headers": [
+          {
+            "source": "**/*",
+            "headers": [
+              {
+                "key": "Cache-Control",
+                "value": "public, max-age=31536000, immutable"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.py"
+      },
+      {
+        "src": "/static/(.*)",
+        "dest": "static/$1"
+      }
+    ]
+}
+  
