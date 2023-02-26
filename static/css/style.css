@@ -102,9 +102,13 @@ footer {
 
 /* Homepage styles */
 
-.slideshow {
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 500px;
     height: 300px;
+    overflow: hidden;
 }
     
 .space-info-container {

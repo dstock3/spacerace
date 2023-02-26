@@ -35,7 +35,6 @@ const parent = document.querySelector(".slideshow-container");
 
 images.forEach(img => {
   img.style.width = `${parent.offsetWidth}px`;
-  img.style.height = `${parent.offsetHeight}px`;
 });
 
 document.addEventListener('DOMContentLoaded', function() {
